@@ -4,6 +4,8 @@ import path from 'path';
 
 type HandlebarsCompileOptions = Parameters<typeof handlebars.compile> extends [input: unknown, options?: infer T] ? T : never;
 
+handlebars.registerHelper('equals', (value1, value2) => value1 === value2);
+
 export const buildBaseData = (): BaseData => {
   const date = new Date();
 
