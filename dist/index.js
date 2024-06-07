@@ -129,6 +129,7 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.buildTemplate = exports.buildFileData = exports.buildBaseData = void 0;
 const handlebars_1 = __importDefault(__nccwpck_require__(7492));
 const path_1 = __importDefault(__nccwpck_require__(1017));
+handlebars_1.default.registerHelper('equals', (value1, value2) => value1 === value2);
 const buildBaseData = () => {
     var _a;
     const date = new Date();
